@@ -1,17 +1,19 @@
 import collections
-def intnums(nums):
+def find_third_largest_num(nums):
+    """
+    >>> find_third_largest_num([2, 2, 4, 4, 5])
+    4
+    >>> find_third_largest_num([1, 2, 4, 6])
+    2
+    """
     sortednums = sorted(nums)
+    if len(sortednums) < 3:
+        return sortednums[-1]
+    return sortednums[-3]
+    #good_sort = [item for item, count in collections.Counter(sortednums).items() if count >= 1]
     
     
-    good_sort = [item for item, count in collections.Counter(sortednums).items() if count >= 1]
-    if len(good_sort) < 3:
-        return good_sort[-1]
-    else: 
-        for i in range(0,2):
-            sortednums = max(nums)
-            nums = [t for t in nums if t!= sortednums]
-        maxnum = max(nums)
-        return maxnum
     
-nums = [2,4,2,2,4,2,2,4]
-print(intnums(nums))
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)
