@@ -1,1 +1,18 @@
+#more pog than dani for being a pro idiot
+def fibnum(n):
+    n1 = 0
+    n2 = 1
+    if n < 0:
+        raise ValueError("The input must be >= 0")
+    if n == 0:
+        return n1
+    elif n == 1:
+        return n2
+    for _ in range(2, n+1):
+        fib = n1 + n2
+        n1 = n2
+        n2 = fib
+    return n2
+print(fibnum(10))
+
 
