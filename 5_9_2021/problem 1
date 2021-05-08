@@ -1,0 +1,8 @@
+def bubble(nums):
+    for _ in range(3):
+        for i in range(len(nums)-1):
+            if nums[i] > nums[i+1]:
+                nums[i], nums[i+1] = nums[i+1], nums[i]
+    return nums
+nums = [10, 5, 3, 1, 25, 4, 11]
+print(bubble(nums))
