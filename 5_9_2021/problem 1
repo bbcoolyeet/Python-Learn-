@@ -4,5 +4,17 @@ def bubble(nums):
             if nums[i] > nums[i+1]:
                 nums[i], nums[i+1] = nums[i+1], nums[i]
     return nums
-nums = [10, 5, 3, 1, 25, 4, 11]
-print(bubble(nums))
+# def numberodos(nums):
+#     for _ in range(3):
+#         for i in range(len(nums)-1):
+#             if nums[i] < nums[i-1]:
+#                 nums[i], nums[i-1] = nums[i-1], nums[i]
+#     return nums
+# nums = [0,3,4,2,5]
+# print(numberodos(nums))   Number 2 broken
+def lastone(nums):
+    for i in range(len(nums)):
+        for j in range(len(nums)-i-1):
+            if nums[j] < nums[j+1]:
+                nums[j], nums[j+1] = nums[j+1], nums[j]
+    return nums
