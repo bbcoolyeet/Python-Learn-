@@ -1,5 +1,5 @@
 def ispalindrome(word):
-    if len(word) < 2: 
+    if len(word) <= 1: 
         return True
     if word[0] != word[-1]: 
         return False
